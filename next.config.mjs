@@ -10,8 +10,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Remove the problematic experimental optimizeCss
   experimental: {
-    optimizeCss: true,
+    // Remove optimizeCss to fix critters error
   },
   async headers() {
     return [
