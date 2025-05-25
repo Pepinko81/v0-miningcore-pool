@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -8,8 +8,12 @@ export const metadata: Metadata = {
   keywords: "mining, cryptocurrency, bitcoin, pool, hashrate, blockchain",
   authors: [{ name: "HashMatrix" }],
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1",
-    generator: 'v0.dev'
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffc107",
 }
 
 export default function RootLayout({
@@ -21,7 +25,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#ffc107" />
       </head>
       <body>{children}</body>
     </html>
